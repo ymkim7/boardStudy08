@@ -1,0 +1,29 @@
+package kr.co.dao;
+
+import java.util.List;
+
+import kr.co.vo.BoardVO;
+import kr.co.vo.Criteria;
+import kr.co.vo.SearchCriteria;
+
+public interface BoardDAO {
+	
+	//게시글 목록
+	public List<BoardVO> list(SearchCriteria scri) throws Exception;
+	
+	//게시물 총 갯수
+	public int listCount(SearchCriteria scri) throws Exception;
+	
+	//게시글 조회
+	public BoardVO read(int bno) throws Exception;
+	
+	//게시글 작성
+	public int write(BoardVO boardVO) throws Exception;
+	
+	//게시글 수정
+	public int update(BoardVO boardVO) throws Exception;
+	
+	//게시글 삭제
+	public int delete(int bno) throws Exception;
+
+}
